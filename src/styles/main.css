@@ -1,0 +1,106 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Search bar styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.search-bar input {
+    flex: 2;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.expansion-select {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.search-bar button {
+    padding: 12px 24px;
+    background: #35424a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background: #2c363d;
+}
+  
+  /* Title styles */
+  h1 {
+    color: #35424a;
+    margin-bottom: 40px;
+  }
+
+  .price-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.price-item {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-info {
+    flex: 0 0 250px;
+    margin-right: 20px;
+}
+
+.card-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.price-data {
+    flex: 1;
+}
+
+.price-entry {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.price-entry:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "price-comparison-site",
+  "version": "1.0.0",
+  "description": "A price comparison site that retrieves prices via an API.",
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^17.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.0.0"
+  }
+}
