@@ -56,7 +56,7 @@ const SearchBar = ({ onSearch }) => {
                     disabled={loading}
                 >
                     {expansions.map(exp => (
-                        <option key={exp.id} value={exp.id} label={exp.name}>
+                        <option key={exp.id} value={exp.id}>
                             {exp.label}
                         </option>
                     ))}

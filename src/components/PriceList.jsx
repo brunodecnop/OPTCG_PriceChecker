@@ -1,26 +1,35 @@
 import React from 'react';
 
 const PriceList = ({ prices }) => {
-    console.log('Prices data:', prices); // Debug log
+    const cardTraderBaseUrl = 'https://www.cardtrader.com';
 
     return (
         <div className="price-list">
-            {prices.map((card, index) => {
-                // Debug log for each card
-                console.log('Card:', card.name);
-                console.log('Price Data CT:', card.priceCT);
-                console.log('Price Data TCG:', card.priceTCG);
-                console.log('Price Data CMK:', card.priceCMK);
-                return (
-                    <div key={index} className="price-item">
-                        <div className="card-info">
-                            <img src={card.image_url} alt={card.name} />
-                            <h3>{card.name}</h3>
-                            <p>CardTrader Price: {card.priceCT}</p>
+            {prices.map((card) => (
+                <div key={card.id} className="price-item">
+                    <img 
+                        src={`${cardTraderBaseUrl}${card.image?.show?.url}`} 
+                        alt={card.name} 
+                        className="card-image"
+                    />
+                    <div className="card-content">
+                        <h3>{card.name}</h3>
+                        <p className="expansion-name">
+                           Expansão: {card.expansion_name}
+                        </p>
+                        <div className="price-data">
+                            <div className="price-entry">
+                                <span>CardTrader:</span>
+                                <strong>{card.priceCT ? `€ ${card.priceCT}` : 'N/A'}</strong>
+                            </div>
+                            <div className="price-entry">
+                                <span>TCGPlayer:</span>
+                                <strong>{card.priceTCG ? `$ ${card.priceTCG}` : 'N/A'}</strong>
+                            </div>
                         </div>
                     </div>
-                );
-            })}
+                </div>
+            ))}
         </div>
     );
 };

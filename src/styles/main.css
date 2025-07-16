@@ -65,40 +65,69 @@ body {
     margin-bottom: 40px;
   }
 
-  .price-list {
+.price-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 25px; 
+    padding: 0;
 }
 
 .price-item {
     display: flex;
+    flex-direction: column; /* Organiza os itens (imagem, conteúdo) em uma coluna vertical */
     background: white;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px; /* Bordas um pouco mais arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Garante que a imagem com borda arredondada não vaze */
+    transition: transform 0.2s ease-in-out; /* Efeito suave ao passar o Mouse */
 }
 
-.card-info {
-    flex: 0 0 250px;
-    margin-right: 20px;
+.price-item:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o Mouse */
 }
 
-.card-info img {
+.card-image {
     width: 100%;
     height: auto;
-    border-radius: 4px;
+    display: block;
+    background-color: #f0f0f0; /* Cor de fundo enquanto a imagem carrega */
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz esta área crescer para ocupar o espaço */
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.expansion-name {
+    font-size: 0.8em;
+    color: #777;
+    margin: 0 0 15px 0;
+    flex-grow: 1; /* Empurra os preços para o fundo do cartão */
 }
 
 .price-data {
-    flex: 1;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
 }
 
 .price-entry {
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    font-size: 0.95em;
+}
+
+.price-entry strong {
+    font-weight: 600;
 }
 
 .price-entry:last-child {
